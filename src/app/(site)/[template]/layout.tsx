@@ -6,14 +6,28 @@ import Nav from "@/components/marketing/Nav";
 import Footer from "@/components/marketing/Footer";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 
+const TEMPLATES = ["beauty", "carpentry", "restaurant"] as const;
+function isTemplateName(x: string): x is TemplateName {
+    return (TEMPLATES as readonly string[]).includes(x);
+}
+
+type MaybePromise<T> = T | Promise<T>;
+async function unwrap<T>(v: MaybePromise<T>): Promise<T> {
+    // @ts-expect-error – guard for React 19/Dev where params can be a Promise
+    return typeof v?.then === "function" ? await (v as Promise<T>) : (v as T);
+}
+
 export default async function TemplateLayout({
                                                  children,
                                                  params,
                                              }: {
     children: ReactNode;
-    params: Promise<{ template: TemplateName }>;
+    // תואם גם ל-Next (object) וגם ל-React 19 (Promise)
+    params: MaybePromise<{ template: string }>;
 }) {
-    const { template } = await params;
+    const { template } = await unwrap(params);   // 👈 תמיד בטוח
+    if (!isTemplateName(template)) return notFound();
+
     const site = await loadSite(template);
     if (!site) return notFound();
 
@@ -28,7 +42,14 @@ export default async function TemplateLayout({
     return (
         <div className={`relative min-h-screen theme-${site.theme}`}>
             <ThemeDecor theme={site.theme} />
-            <SchemaOrg site={site} url={process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}${base}` : undefined} />
+            <SchemaOrg
+                site={site}
+                url={
+                    process.env.NEXT_PUBLIC_SITE_URL
+                        ? `${process.env.NEXT_PUBLIC_SITE_URL}${base}`
+                        : undefined
+                }
+            />
 
             <Nav theme={site.theme} items={navItems} brand={site.name} logo={site.logo} />
             <main id="main">{children}</main>

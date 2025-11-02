@@ -22,7 +22,7 @@ export default function HomePage() {
           <TrailToCTA />
           <div role="separator" aria-hidden className="fancy-hr mx-auto my-14 max-w-5xl" />
           <motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.1}}
-                    className="mt-4 text-center text-black">
+                    className="mt-4 text-center">
             שלוש תבניות מודרניות ומוכרות-מוכנות להדגמה ולסגירת לקוח.
           </motion.p>
 
