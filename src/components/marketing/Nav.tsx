@@ -38,7 +38,7 @@ export default function Nav({ theme, items, brand, logo }: NavProps) {
                                 <Link
                                     href={item.href}
                                     className={`nav-link px-3 py-2 transition-all focus-visible:ring
-                  ${active ? "bg-brand/10 text-fg" : "hover:bg-white/5"}
+                  ${active ? "bg-brand/10 text-brand" : "hover:bg-white/5"}
                   ${theme === "beauty" ? "rounded-full" : theme === "carpentry" ? "rounded-md" : "rounded-xl"}`}
                                     data-active={active ? "true" : "false"}
                                 >

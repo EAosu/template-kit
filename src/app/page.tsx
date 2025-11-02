@@ -40,7 +40,7 @@ export default function HomePage() {
                   <h2 className="text-xl font-semibold text-white">{c.title}</h2>
                   <p className="mt-2 text-sm text-muted">{c.desc}</p>
                   <div className="mt-6 flex items-center justify-between">
-                    <Link href={`/${c.slug}`} className="btn-hover inline-flex rounded-xl bg-brand px-4 py-2 text-white">
+                    <Link href={`/${c.slug}`} target={"_blank"} className="btn-hover inline-flex rounded-xl bg-brand px-4 py-2 text-white">
                       צפה בתבנית
                     </Link>
                   </div>

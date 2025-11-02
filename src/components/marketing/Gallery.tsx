@@ -42,7 +42,7 @@ export default function Gallery({ images }: { images: GalleryInput }) {
                             <InView
                                 key={key}
                                 variants={zoomReveal}
-                                className="group overflow-hidden rounded-2xl border border-base shadow-soft"
+                                className="group overflow-hidden rounded-2xl border border-base shadow-soft m-2"
                             >
                                 <div className="relative aspect-[4/3]">
                                     <InView

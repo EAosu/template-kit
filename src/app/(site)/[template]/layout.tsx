@@ -22,10 +22,9 @@ export default async function TemplateLayout({
                                                  params,
                                              }: {
     children: ReactNode;
-    // תואם גם ל-Next (object) וגם ל-React 19 (Promise)
     params: MaybePromise<{ template: string }>;
 }) {
-    const { template } = await unwrap(params);   // 👈 תמיד בטוח
+    const { template } = await unwrap(params);
     if (!isTemplateName(template)) return notFound();
 
     const site = await loadSite(template);

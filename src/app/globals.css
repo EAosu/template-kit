@@ -34,7 +34,7 @@
 
   /* Beauty config */
   .theme-beauty {
-    --bg:#fff9fb;
+    --bg:#3d0e31;
     --fg:#2a1120;
     --muted:#6f5a67;
     --brand:#f472b6;
@@ -57,9 +57,9 @@
 
   /* Restaurant config */
   .theme-restaurant {
-    --bg:#fffefd;
+    --bg:#002020;
     --fg:#1c2a22;
-    --muted:#002020;
+    --muted:#051005;
     --brand:#16a34a;
     --brand-2:#10b981;
     --card:#1c3a22;
