@@ -24,8 +24,6 @@
     --brand-2:#22c55e;
     --card:rgba(5,5,5,.8);
     --border:#2a231c;
-    --background: var(--bg);
-    --foreground: var(--fg);
   }
   :where(.theme-carpentry) .accent-ring {
     box-shadow: 0 0 0 1px rgba(180,83,9,.25); /* ring-1 ring-[rgba(180,83,9,.25)] */
@@ -33,19 +31,6 @@
   :where(.theme-carpentry) .btn { border-radius: 0.75rem; box-shadow: 0 8px 24px rgba(180,83,9,.25) }
 
   /* Beauty config */
-  .theme-beauty {
-    --bg:#3d0e31;
-    --fg:#2a1120;
-    --muted:#6f5a67;
-    --brand:#f472b6;
-    --brand-2:#fda4af;
-    --card:rgba(255,60,140,.6);
-    --border:#f3dbe4;
-    --background: var(--bg);
-    --foreground: var(--fg);
-  }
-  :where(.theme-beauty) .btn { border-radius: 9999px }
-  :where(.theme-beauty) .rounded-theme{ border-radius:9999px; }
   .beauty-soft{
     background:
             radial-gradient(60% 90% at 75% 40%, rgba(238,87,186,.6), transparent 60%),
@@ -54,6 +39,18 @@
             radial-gradient(25% 25% at 35% 65%, rgba(240,20,200,.4), transparent 60%),
             #ffeeee;
   }
+  .theme-beauty {
+    --bg:#3d0e31;
+    --fg: #1b0b14;
+    --muted: #29141f;
+    --brand:#f472b6;
+    --brand-2:#fda4af;
+    --card: radial-gradient(rgba(232, 13, 179, 0.5), rgba(180,5,140,.25));
+    --border:#f3dbe4;
+  }
+  :where(.theme-beauty) .btn { border-radius: 9999px }
+  :where(.theme-beauty) .rounded-theme{ border-radius:9999px; }
+
 
   /* Restaurant config */
   .theme-restaurant {
@@ -64,8 +61,6 @@
     --brand-2:#10b981;
     --card:#1c3a22;
     --border:#e7eee9;
-    --background: var(--bg);
-    --foreground: var(--fg);
   }
   :where(.theme-restaurant) .section { padding-block: 5rem; }
   :where(.theme-restaurant) .gallery-card img { object-fit: cover; }

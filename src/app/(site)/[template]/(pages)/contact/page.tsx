@@ -22,7 +22,7 @@ export default async function ContactPage({
             <Section>
                 <Container>
                     <h1 className="text-4xl font-bold rounded-theme inline-block px-2">צור קשר</h1>
-                    <p className="mt-3 text-muted">נשמח לשמוע מכם—וואטסאפ מיידי או טופס מהיר.</p>
+                    <p className="mt-3 text-muted">נשמח לשמוע מכם-וואטסאפ מיידי או טופס מהיר.</p>
 
                     <ContactForm
                         template={site.theme}       // "beauty" | "carpentry" | "restaurant"

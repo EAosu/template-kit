@@ -7,11 +7,14 @@ export interface FooterProps {
 }
 
 export default function Footer({ name, links = [], year = new Date().getFullYear() }: FooterProps) {
+    const surface = "color-mix(in oklab, var(--bg) 30%, transparent)";
+
     return (
-        <footer className="mt-20 border-t border-base bg-card/50" role="contentinfo">
+        <footer className="mt-20 border-t border-base" role="contentinfo"
+                style={{ background: surface }}>
             <div className="mx-auto max-w-6xl px-4 py-10">
                 <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-                    <p className="text-sm text-muted">
+                    <p className="text-sm text-muted font-bold">
                         © {year} {name}. כל הזכויות שמורות.
                     </p>
                     {!!links.length && (

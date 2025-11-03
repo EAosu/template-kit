@@ -39,7 +39,7 @@ export default async function TemplateLayout({
     ] as const;
 
     return (
-        <div className={`relative min-h-screen theme-${site.theme}`}>
+        <div className={`relative min-h-screen theme-${site.theme} overflow-x-hidden`}>
             <ThemeDecor theme={site.theme} />
             <SchemaOrg
                 site={site}

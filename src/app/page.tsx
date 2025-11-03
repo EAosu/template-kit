@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import TrailToCTA from "@/components/marketing/TrailToCTA";
+import SpotlightCTA from "@/components/marketing/SpotlightCTA";
 
 const cards = [
   { slug:"beauty", title:"Beauty Studio", desc:"ורוד-לבן בהיר, עדין ומדויק." },
@@ -19,7 +19,7 @@ export default function HomePage() {
           >
             Ely Template Kit
           </motion.h1>
-          <TrailToCTA />
+          <SpotlightCTA />
           <div role="separator" aria-hidden className="fancy-hr mx-auto my-14 max-w-5xl" />
           <motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.1}}
                     className="mt-4 text-center">

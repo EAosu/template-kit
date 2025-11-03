@@ -1,4 +1,4 @@
-# Ely Template Kit — React/Next.js
+# Ely Template Kit - React/Next.js
 
 Production-ready template kit לבניית אתרים לעסקים בצורה מהירה, מודולרית ונגישה.
 כולל תבניות: **Beauty Salon**, **Carpentry**, **Restaurant**, Theme System, Hero Unified, וסט אנימציות Framer-Motion.

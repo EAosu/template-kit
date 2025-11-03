@@ -85,9 +85,8 @@ export default function Hero({
                         sizes="100vw"
                         className={`object-cover ${preset.imageOpacity ?? "opacity-75"}`}
                     />
-                    {/* Overlay עדין בלבד כדי שהטקסט יהיה קריא — לא יותר מ-0.25 */}
-                    <div aria-hidden className="absolute inset-0"
-                         style={{ background: "linear-gradient(to top, rgba(0,0,0,.18), rgba(0,0,0,.08) 40%, transparent)" }} />
+                    <div className="absolute inset-0"
+                         style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(0,0,0,.18))" }} />
                 </div>
             )}
 

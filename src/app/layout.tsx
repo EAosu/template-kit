@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="he" dir="rtl">
+        <html className={"overflow-x-hidden"} lang="he" dir="rtl">
         <body>{children}</body>
         </html>
     );
