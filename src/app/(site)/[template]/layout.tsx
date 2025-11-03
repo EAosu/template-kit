@@ -52,7 +52,11 @@ export default async function TemplateLayout({
 
             <Nav theme={site.theme} items={navItems} brand={site.name} logo={site.logo} />
             <main id="main">{children}</main>
-            <Footer name={site.name} links={[{ label: "צור קשר", href: `${base}/contact` }]} />
+            <Footer name={site.name}
+                    links={[
+                        { label: "צור קשר", href: `${base}/contact` },
+                        { label: "הצהרת נגישות", href: "/accessibility" },
+                    ]} />
         </div>
     );
 }

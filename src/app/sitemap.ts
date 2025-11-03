@@ -1,21 +1,30 @@
+// app/sitemap.ts
 import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
+export const revalidate = 60 * 60;
 
 const TEMPLATES = ["beauty", "carpentry", "restaurant"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const base = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://elyasaf-webstudio.vercel.app";
 
-    const staticRoutes = ["", "sell", "sell/thanks", "accessibility"];
+    // absolute URLs בלבד
+    const staticRoutes = ["", "sell", "sell/thanks", "accessibility"].map((p) => `${base}/${p}`);
     const templateRoutes = TEMPLATES.flatMap((t) => [
-        `${t}`,
-        `${t}/about`,
-        `${t}/services`,
-        `${t}/contact`,
+        `${base}/${t}`,
+        `${base}/${t}/about`,
+        `${base}/${t}/services`,
+        `${base}/${t}/contact`,
     ]);
 
-    return [...staticRoutes, ...templateRoutes].map((path) => ({
-        url: `${base}/${path}`,
-        lastModified: new Date(),
+    const urls = [...staticRoutes, ...templateRoutes];
+
+    const lastMod = new Date();
+
+    return urls.map((url) => ({
+        url,
+        lastModified: lastMod,
         changeFrequency: "monthly",
         priority: 0.8,
     }));

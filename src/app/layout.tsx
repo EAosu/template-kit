@@ -26,13 +26,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html className={"overflow-x-hidden"} lang="he" dir="rtl">
-        <head><meta name="google-site-verification" content="HJiBRTHEKA7_Zo9qLnSRQXeM_n4HCeAM6t09wgcnEZ8" />
-            <title></title></head>
         <body>
-            <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-black focus:text-white focus:rounded px-3 py-2">
-                דלג לתוכן
-            </a>
-            {children}
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-black focus:text-white focus:rounded px-3 py-2">
+            דלג לתוכן
+        </a>
+        {children}
         </body>
         </html>
     );

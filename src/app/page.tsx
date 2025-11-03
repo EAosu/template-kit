@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import SpotlightCTA from "@/components/marketing/SpotlightCTA";
+import Footer from "@/components/marketing/Footer";
 
 const cards = [
   { slug:"beauty", title:"Beauty Studio", desc:"ורוד-לבן בהיר, עדין ומדויק." },
@@ -48,6 +49,13 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+        <Footer
+            name="Ely Asaf • Web Studio"
+            links={[
+              { label: "צור קשר", href: "/sell" },
+              { label: "הצהרת נגישות", href: "/accessibility" },
+            ]}
+        />
       </main>
   );
 }
