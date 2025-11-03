@@ -14,6 +14,7 @@
   .text-muted{ color:var(--muted); }
   .text-brand { color: var(--brand); }
   .bg-brand { background: var(--brand); }
+  :focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
 
   /* Carpentry config */
   .theme-carpentry {

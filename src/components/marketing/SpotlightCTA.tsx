@@ -23,7 +23,7 @@ export default function SpotlightCTA() {
                 <p className="mt-3 text-muted">השאירו פרטים ונחזור אליכם עם הצעת מחיר מהירה.</p>
 
                 <div className="mt-10 text-center">
-                    <Link href="/sell" className="rounded-full px-6 py-3 bg-brand text-white hover:brightness-110">
+                    <Link href="/sell" className="rounded-full px-6 py-3 bg-black/50 text-white hover:bg-black/70">
                         קבלו הצעת מחיר
                     </Link>
                 </div>

@@ -31,7 +31,7 @@ export default function HomePage() {
                 <motion.div key={c.slug}
                             initial={{opacity:0,y:18,scale:.98}} animate={{opacity:1,y:0,scale:1}}
                             transition={{duration:.45, delay:i*0.08}}
-                            className="rounded-2xl border border-base bg-[linear-gradient(135deg,#2b798c,#1b1d4f)] p-6 shadow-soft"
+                            className="rounded-2xl border border-base bg-[linear-gradient(45deg,#070e29,#190729)] p-6 shadow-soft"
                 >
                   <div className={`h-36 w-full rounded-2xl mb-5
                 ${c.slug==="beauty" ? "bg-[linear-gradient(135deg,#fda4af,#f472b6)]"
@@ -40,7 +40,7 @@ export default function HomePage() {
                   <h2 className="text-xl font-semibold text-white">{c.title}</h2>
                   <p className="mt-2 text-sm text-muted">{c.desc}</p>
                   <div className="mt-6 flex items-center justify-between">
-                    <Link href={`/${c.slug}`} target={"_blank"} className="btn-hover inline-flex rounded-xl bg-brand px-4 py-2 text-white">
+                    <Link href={`/${c.slug}`} target={"_blank"} className="btn-hover inline-flex rounded-xl bg-black/40 px-4 py-2 text-white">
                       צפה בתבנית
                     </Link>
                   </div>

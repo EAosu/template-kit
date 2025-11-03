@@ -2,6 +2,13 @@
 import * as React from "react";
 
 export default function LeadForm() {
+    const [nextUrl, setNextUrl] = React.useState<string>("/sell/thanks");
+
+    React.useEffect(() => {
+        const base = typeof window !== "undefined" ? window.location.origin : "";
+        setNextUrl(`${base}/sell/thanks`);
+    }, []);
+
     return (
         <form
             id="contact"
@@ -13,7 +20,7 @@ export default function LeadForm() {
             <input type="hidden" name="_subject" value="New lead - Template Kit" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="/sell/thanks" />
+            <input type="hidden" name="_next" value={`${process.env.NEXT_PUBLIC_SITE_URL}/sell/thanks`} />
             {/* honeypot */}
             <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 

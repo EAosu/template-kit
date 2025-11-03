@@ -1,10 +1,20 @@
-const HOST = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
-const routes = ["/", "/beauty", "/carpentry", "/restaurant"];
+import { MetadataRoute } from "next";
 
-export async function GET() {
-    const body = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(r => `<url><loc>${HOST}${r}</loc></url>`).join("")}
-</urlset>`;
-    return new Response(body, { headers: { "Content-Type": "application/xml" }});
+export default function sitemap(): MetadataRoute.Sitemap {
+    const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+    const routes = [
+        "", "sell", "sell/thanks",
+        "beauty", "restaurant", "carpentry",
+        "beauty/about", "restaurant/about", "carpentry/about",
+        "beauty/contact", "restaurant/contact", "carpentry/contact",
+        "accessibility"
+    ];
+
+    return routes.map((path) => ({
+        url: `${base}/${path}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    }));
 }
