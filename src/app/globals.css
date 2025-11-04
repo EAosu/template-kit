@@ -32,21 +32,13 @@
   :where(.theme-carpentry) .btn { border-radius: 0.75rem; box-shadow: 0 8px 24px rgba(180,83,9,.25) }
 
   /* Beauty config */
-  .beauty-soft{
-    background:
-            radial-gradient(60% 90% at 75% 40%, rgba(238,87,186,.6), transparent 60%),
-            radial-gradient(50% 40% at 50% 50%, rgba(253,164,175,.7), transparent 60%),
-            radial-gradient(30% 30% at 40% 30%, rgba(244,114,182,.5), transparent 60%),
-            radial-gradient(25% 25% at 35% 65%, rgba(240,20,200,.4), transparent 60%),
-            #ffeeee;
-  }
   .theme-beauty {
-    --bg:#3d0e31;
-    --fg: #1b0b14;
-    --muted: #29141f;
-    --brand:#f472b6;
+    --bg: #a1115c;
+    --fg: #55213f;
+    --muted: #edd8ec;
+    --brand: #3a0320;
     --brand-2:#fda4af;
-    --card: radial-gradient(rgba(232, 13, 179, 0.5), rgba(180,5,140,.25));
+    --card: radial-gradient(#a1115c, #70073e);
     --border:#f3dbe4;
   }
   :where(.theme-beauty) .btn { border-radius: 9999px }
@@ -57,10 +49,10 @@
   .theme-restaurant {
     --bg:#002020;
     --fg:#1c2a22;
-    --muted:#051005;
+    --muted: #c8dfc8;
     --brand:#16a34a;
     --brand-2:#10b981;
-    --card:#1c3a22;
+    --card:radial-gradient(#142b18, #021b07);
     --border:#e7eee9;
   }
   :where(.theme-restaurant) .section { padding-block: 5rem; }
