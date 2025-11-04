@@ -29,6 +29,16 @@ export default function Footer({ name, links = [], year = new Date().getFullYear
                         </nav>
                     )}
                 </div>
+                <p className="mt-3 text-xs text-muted">
+                    Website by{" "}
+                    <a
+                        href="https://elyasaf-webstudio.vercel.app/?utm_source=client-site&utm_medium=footer_link"
+                        className="underline hover:text-brand focus-visible:ring"
+                        rel="noopener"
+                    >
+                        Ely Asaf
+                    </a>
+                </p>
             </div>
         </footer>
     );

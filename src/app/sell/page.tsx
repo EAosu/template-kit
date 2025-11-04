@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SalesHero from "@/components/sales/SalesHero";
 import LeadForm from "@/components/sales/LeadForm";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "בניית אתרים מהירה לעסקים | Template Kit",
@@ -42,9 +43,15 @@ function Card({ children }: { children: React.ReactNode }) {
 export default function SellPage() {
     return (
         <>
+            <Link
+                href="/"
+                aria-label="חזרה לדף התבניות"
+                className="fixed bottom-5 left-5 z-40 md:hidden rounded-full bg-brand text-white px-4 py-3 shadow-soft focus-visible:ring"
+                >
+                חזרה לתבניות
+            </Link>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <SalesHero />
-
             <section className="py-14">
                 <div className="mx-auto max-w-6xl px-6">
                     <SectionTitle title="למה לבחור בי" subtitle="זריזות, איכות, ושקיפות מלאה" />

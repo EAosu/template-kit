@@ -16,27 +16,27 @@ type Card = {
 const cards: readonly Card[] = [
     {
         slug: "beauty",
-        title: "Beauty Studio",
-        desc: "ורוד-לבן בהיר, עדין ומדויק.",
+        title: "סלון יופי",
+        desc: "סגול-ורוד בהיר, עדין ומדויק.",
         img: { src: "/images/beauty/hero.jpg", alt: "Beauty template hero", width: 1200, height: 800 },
     },
     {
         slug: "carpentry",
-        title: "Carpentry",
+        title: "נגרות",
         desc: "כהה-חם עם תחושת חומר.",
         img: { src: "/images/carpentry/hero.jpg", alt: "Carpentry template hero", width: 1200, height: 800 },
     },
     {
         slug: "restaurant",
-        title: "Catering",
-        desc: "טרי-חגיגי עם תפריט מסודר.",
+        title: "מסעדה",
+        desc: "טרי-חגיגי עם תחושה מקצועית.",
         img: { src: "/images/restaurant/hero.jpg", alt: "Restaurant template hero", width: 1200, height: 800 },
     },
 ] as const;
 
 export default function HomePage() {
     return (
-        <main className="min-h-[100svh] bg-[var(--bg)] text-[var(--fg)]">
+        <main className="min-h-[100svh] overflow-hidden">
             <section className="mx-auto max-w-6xl px-4 py-24">
                 <motion.h1
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5 }}
@@ -64,13 +64,13 @@ export default function HomePage() {
                             transition={{ duration: .45, delay: i * 0.08 }}
                             className="group rounded-2xl border border-base bg-card p-4 shadow-soft"
                         >
-                            <div className="relative h-40 w-full overflow-hidden rounded-xl">
+                            <div className="relative h-40 w-full rounded-xl">
                                 <Image
                                     src={c.img.src}
                                     alt={c.img.alt}
                                     width={c.img.width}
                                     height={c.img.height}
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.05]"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                     priority={i === 0}
                                 />

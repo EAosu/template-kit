@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import BackToTemplate from "@/components/sales/BackToTemplate";
 
 export default function SalesHero() {
     return (
         <section className="relative overflow-hidden py-20 md:py-28">
-            {/* רקע נשי/טכנולוגי עדין */}
             <motion.div
                 aria-hidden
                 className="absolute inset-0 -z-10"
@@ -27,11 +27,25 @@ export default function SalesHero() {
                 <p className="mt-4 text-lg md:text-xl text-muted">
                     תבניות פרימיום מותאמות לעסק שלך + התאמות עיצוב, תוכן ואוטומציות. התחלה מהירה - תוצאה מושלמת.
                 </p>
+
+                <div
+                    className="mt-8 flex items-center justify-center mx-100 pt-5 rounded-2xl"
+                    style={{
+                        background: [
+                            "radial-gradient(60% 50% at 70% 0%, rgba(109,40,217,.25), transparent 70%)",
+                            "radial-gradient(55% 45% at 20% 30%, rgba(34,211,238,.20), transparent 65%)",
+                            "linear-gradient(180deg, rgba(255,255,255,.06), transparent)"
+                        ].join(", "),
+                    }}
+                >
+                    <BackToTemplate />
+                </div>
+
                 <div className="mt-8 flex items-center justify-center gap-3">
-                    <Link href="#packages" className="rounded-full px-6 py-3 bg-brand text-white btn-hover focus-visible:ring">
+                    <Link href="#packages" className="rounded-full px-6 py-3 bg-brand text-white hover:brightness-110 focus-visible:ring">
                         חבילות ומחירים
                     </Link>
-                    <Link href="#contact" className="rounded-full px-6 py-3 border border-base bg-card hover:bg-white/5 focus-visible:ring">
+                    <Link href="#contact" className="rounded-full px-6 py-3 border border-base bg-card btn-hover focus-visible:ring">
                         דברו איתי
                     </Link>
                 </div>
