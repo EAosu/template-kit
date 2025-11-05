@@ -17,7 +17,18 @@ export const metadata: Metadata = {
         title: "Ely Asaf • Web Studio",
         description:
             "בונה אתרים מהירים, נגישים ויפים לעסקים בישראל.",
-        siteName: "Ely Asaf • Web Studio",
+        url: "https://elyasaf-webstudio.vercel.app",
+        siteName: "Ely Asaf Web Studio",
+        images: [
+            {
+                url: "/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Ely Asaf Web Studio - בניית אתרים ודפי נחיתה",
+            },
+        ],
+        locale: "he_IL",
+        type: "website",
     },
     twitter: { card: "summary_large_image" },
     icons: [{ rel: "icon", url: "/favicon.ico" }],
