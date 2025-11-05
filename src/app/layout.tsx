@@ -30,9 +30,6 @@ export const metadata: Metadata = {
         locale: "he_IL",
         type: "website",
     },
-    other: {
-        "fb:app_id": "000000000000000",
-    },
     twitter: { card: "summary_large_image" },
     icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
@@ -40,6 +37,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html className={"overflow-x-hidden"} lang="he" dir="rtl">
+        <head>
+            <meta property="fb:app_id" content="1234567890" />
+        </head>
         <body>
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-black focus:text-white focus:rounded px-3 py-2">
             דלג לתוכן
