@@ -30,6 +30,9 @@ export const metadata: Metadata = {
         locale: "he_IL",
         type: "website",
     },
+    other: {
+        "fb:app_id": "000000000000000",
+    },
     twitter: { card: "summary_large_image" },
     icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
