@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BackToTemplates() {
     return (
-        <div className="mb-6 flex justify-center md:justify-start">
+        <div className="hidden mb-6 md:flex justify-center md:justify-start">
             <Link
                 href="/"
                 aria-label="חזרה לדף התבניות"

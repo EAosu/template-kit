@@ -46,7 +46,7 @@ export default function SellPage() {
             <Link
                 href="/"
                 aria-label="חזרה לדף התבניות"
-                className="fixed bottom-5 left-5 z-40 md:hidden rounded-full bg-brand text-white px-4 py-3 shadow-soft focus-visible:ring"
+                className="fixed bottom-5 left-5 z-40 md:hidden rounded-full bg-card border border-base text-white px-4 py-3 shadow-soft focus-visible:ring"
                 >
                 חזרה לתבניות
             </Link>

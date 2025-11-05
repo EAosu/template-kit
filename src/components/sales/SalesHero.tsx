@@ -29,14 +29,7 @@ export default function SalesHero() {
                 </p>
 
                 <div
-                    className="mt-8 flex items-center justify-center mx-100 pt-5 rounded-2xl"
-                    style={{
-                        background: [
-                            "radial-gradient(60% 50% at 70% 0%, rgba(109,40,217,.25), transparent 70%)",
-                            "radial-gradient(55% 45% at 20% 30%, rgba(34,211,238,.20), transparent 65%)",
-                            "linear-gradient(180deg, rgba(255,255,255,.06), transparent)"
-                        ].join(", "),
-                    }}
+                    className="mt-8 flex items-center justify-center"
                 >
                     <BackToTemplate />
                 </div>
