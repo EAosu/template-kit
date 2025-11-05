@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         siteName: "Ely Asaf Web Studio",
         images: [
             {
-                url: "/og-image.jpg",
+                url: "/og.png",
                 width: 1200,
                 height: 630,
                 alt: "Ely Asaf Web Studio - בניית אתרים ודפי נחיתה",
