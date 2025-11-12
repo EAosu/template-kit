@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { saveLead } from "@/lib/crm";
+import Link from "next/link";
 
 type Template = "beauty" | "carpentry" | "restaurant";
 
@@ -21,13 +22,13 @@ export default function ContactForm({ template, whatsappHref, email }: ContactFo
     return (
         <>
             <div className="mt-6 flex flex-wrap gap-3">
-                <a href={whatsappHref} className="btn-hover inline-flex rounded-theme bg-brand px-5 py-3 font-medium text-white accent-ring">
+                <Link href={whatsappHref} className="btn-hover inline-flex rounded-theme bg-brand px-5 py-3 font-medium text-white accent-ring">
                     הודעת WhatsApp
-                </a>
+                </Link>
                 {email && (
-                    <a href={`mailto:${email}`} className="btn-hover inline-flex rounded-theme border border-base px-5 py-3 font-medium">
+                    <Link href={`mailto:${email}`} className="btn-hover inline-flex rounded-theme border border-base px-5 py-3 font-medium">
                         שלחו מייל
-                    </a>
+                    </Link>
                 )}
             </div>
 

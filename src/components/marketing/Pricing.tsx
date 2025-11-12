@@ -2,6 +2,7 @@ import Section from "@/components/primitives/Section";
 import Container from "@/components/primitives/Container";
 import { InView } from "@/components/motion/InView";
 import { fadeUp } from "@/components/motion/motion";
+import Link from "next/link";
 
 export default function Pricing({ plans }:{ plans:{name:string;price:string;items:string[]}[] }) {
     return (
@@ -16,9 +17,9 @@ export default function Pricing({ plans }:{ plans:{name:string;price:string;item
                                 <ul className="mt-4 space-y-2 text-sm text-muted">
                                     {p.items.map((li, idx)=> <li key={idx}>• {li}</li>)}
                                 </ul>
-                                <a href="#contact" className="mt-6 inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white">
+                                <Link href="#contact" className="mt-6 inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white">
                                     קבל הצעת מחיר
-                                </a>
+                                </Link>
                             </div>
                         </InView>
                     ))}

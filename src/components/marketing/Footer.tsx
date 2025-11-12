@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 
 export interface FooterProps {
     name: string;
@@ -22,7 +23,7 @@ export default function Footer({ name, links = [], year = new Date().getFullYear
                             <ul className="flex flex-wrap gap-4">
                                 {links.map((l) => (
                                     <li key={l.href}>
-                                        <a className="text-sm hover:underline" href={l.href}>{l.label}</a>
+                                        <Link className="text-sm hover:underline" href={l.href}>{l.label}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -31,13 +32,13 @@ export default function Footer({ name, links = [], year = new Date().getFullYear
                 </div>
                 <p className="mt-3 text-xs text-muted">
                     Website by{" "}
-                    <a
+                    <Link
                         href="https://elyasaf-webstudio.vercel.app/?utm_source=client-site&utm_medium=footer_link"
                         className="underline hover:text-brand focus-visible:ring"
                         rel="noopener"
                     >
                         Ely Asaf
-                    </a>
+                    </Link>
                 </p>
             </div>
         </footer>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 
 export interface ButtonLinkProps {
     href: string;
@@ -12,8 +13,8 @@ export default function ButtonLink({ href, children, variant="solid", className 
     const solid = "bg-brand text-white shadow-soft hover:opacity-90 accent-ring";
     const outline = "border border-base hover:bg-white/5";
     return (
-        <a href={href} className={`${base} ${variant==="solid" ? solid : outline} ${className||""}`}>
+        <Link href={href} className={`${base} ${variant==="solid" ? solid : outline} ${className||""}`}>
             {children}
-        </a>
+        </Link>
     );
 }

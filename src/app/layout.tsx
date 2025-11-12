@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
@@ -38,9 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html className={"overflow-x-hidden"} lang="he" dir="rtl">
         <body>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-black focus:text-white focus:rounded px-3 py-2">
+        <Link href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-black focus:text-white focus:rounded px-3 py-2">
             דלג לתוכן
-        </a>
+        </Link>
         {children}
         </body>
         </html>

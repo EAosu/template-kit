@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Accessibility() {
     return (
         <div className="mx-auto max-w-3xl px-6 py-12">
@@ -17,7 +19,7 @@ export default function Accessibility() {
             <h2 className="mt-6 text-xl font-semibold">יצירת קשר בנושא נגישות</h2>
             <p className="text-muted">
                 אם נתקלתם בבעיה או הצעה לשיפור – נשמח לסייע:
-                <br/>דוא״ל: <a className="underline" href="mailto:elyasaf896@gmail.com">elyasaf896@gmail.com</a>
+                <br/>דוא״ל: <Link className="underline" href="mailto:elyasaf896@gmail.com">elyasaf896@gmail.com</Link>
             </p>
             <p className="mt-6 text-sm text-muted">עודכן: {new Date().toLocaleDateString("he-IL")}</p>
         </div>

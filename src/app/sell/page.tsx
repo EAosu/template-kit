@@ -73,7 +73,7 @@ export default function SellPage() {
                             <ul className="mt-3 text-muted space-y-2">
                                 <li>דף נחיתה ממיר</li><li>חיבור טופס למייל</li><li>מותאם נייד ונגישות בסיסית</li>
                             </ul>
-                            <a href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</a>
+                            <Link href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</Link>
                         </Card>
                         <Card>
                             <h3 className="text-xl font-bold">עסק צומח</h3>
@@ -81,7 +81,7 @@ export default function SellPage() {
                             <ul className="mt-3 text-muted space-y-2">
                                 <li>אתר עד 5 עמודים</li><li>גלריות/בלוג/עדכונים</li><li>SEO + אנליטיקס</li>
                             </ul>
-                            <a href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</a>
+                            <Link href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</Link>
                         </Card>
                         <Card>
                             <h3 className="text-xl font-bold">פרימיום</h3>
@@ -89,7 +89,7 @@ export default function SellPage() {
                             <ul className="mt-3 text-muted space-y-2">
                                 <li>עיצוב מותאם אישית</li><li>אוטומציות ו-API</li><li>נגישות, ביצועים ו-A/B</li>
                             </ul>
-                            <a href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</a>
+                            <Link href="#contact" className="mt-6 inline-block rounded-full px-5 py-3 bg-brand text-white hover:brightness-110">קבלו הצעה</Link>
                         </Card>
                     </div>
                 </div>
